@@ -1,15 +1,15 @@
-//TODO: FUNCTION THAT CONVERTS PIXEL VALUES TO REM
+//TODO: ==========>> FUNCTION THAT CONVERTS PIXEL VALUES TO REM
 
 export const rem = (pixel) => {
     const remSize = pixel / 16;
     return `${remSize}rem`;
 }
 
-//TODO: DEFAULT REM CONVERSTION DENOMINATOR
+//TODO: ==========>> DEFAULT REM CONVERSTION DENOMINATOR
 
 const toREM = 16;
 
-//TODO: MEDIA QUERIES 
+//TODO: ==========>> MEDIA QUERIES 
 
 const BREAKPOINTS = {
     screen1: 300,
@@ -31,3 +31,24 @@ export const QUERIES = {
     largeDesktop: `(min-width: ${BREAKPOINTS.screen7 / toREM}rem)`,
 };
 
+//TODO: ==========>> UNIVERSAL COLORS
+
+export const COLOR = {
+    pry100: `#5267df`,
+    pry200: `#fa5959`,
+    sec100: `#242a45`,
+    sec200: `#9194a2`,
+    bg: `#f2f2f2`
+}
+
+//TODO: ==========>> FONT FAMILY
+
+export const FONT = {
+    pry100: `'Rubik', sans-serif`
+}
+
+//TODO: ==========>> MAXIMUM WIDTH
+
+export const WIDTH = {
+    max: `69rem`
+}

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { QUERIES, COLOR, FONT, WIDTH } from "../../Global/GlobalHelpers";
 
 
 export const HeaderContainer = styled.header `
@@ -8,8 +9,8 @@ export const HeaderContainer = styled.header `
 `
 
 export const HeaderInnerContainer = styled.div `
-    background-color: black;
-    max-width: var(--max-width);
+    background-color: yellow;
+    max-width: ${WIDTH.max};
     min-height: 4rem;
     margin: 0 auto;
 `

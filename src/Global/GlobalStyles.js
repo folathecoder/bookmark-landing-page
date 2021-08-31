@@ -1,29 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import { QUERIES } from "./GlobalHelpers";
+import { QUERIES, COLOR, FONT, WIDTH } from "./GlobalHelpers";
 
 
 const GlobalStyle = createGlobalStyle `
-
-    //TODO: ==========>> DEFAULT STYLES
-
-    :root {
-        // ==> FONT FAMILY
-        --font-family: 'Rubik', sans-serif;
-
-        // ==> FONT WEIGHTS
-        --weight-regular: 400;
-        --weight-medium: 500;
-
-        // ==> COLORS
-        --color-pry-100: #5267df;
-        --color-pry-200: #fa5959;
-        --color-sec-100: #242a45;
-        --color-sec-200: #9194a2;
-        --color-bg: #f2f2f2;
-
-        // ==> MAXIMUM WIDTH
-        --max-width: rem(1104);
-    } 
 
     //TODO: ==========>> CSS RESET
 
@@ -91,13 +70,9 @@ const GlobalStyle = createGlobalStyle `
     body {
         max-width: 100%;
         min-height: 100vh;
-        font-family: var(--font-family);
+        font-family: ${FONT.pry100};
         font-size: 1rem;    
-        background-color: var(---color-bg);
-
-        /* @media ${QUERIES.desktop} {
-            background-color: blue;
-        } */
+        background-color: ${COLOR.bg};
     } 
 
     //TODO: ==========>> TYPOGRAPHY
