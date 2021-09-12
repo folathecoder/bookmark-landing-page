@@ -20,6 +20,10 @@ export const GlobalStyles = createGlobalStyle`
 
         // WIDTH
         --max-container: 69rem;
+        --center-container: 0 auto;
+
+        //BORDER
+        --border-radius: 0.3125rem;
     }
 
     ///////////////////////////////////////////////////////
@@ -59,6 +63,17 @@ export const GlobalStyles = createGlobalStyle`
     ///////////////////////////////////////////////////////
 
     //TODO: TYPOGRAPHY
+
+    a {
+        color: var(--color-sec-100);
+        font-weight: var(--font-weight-200);
+        font-size: 0.9rem;
+
+        &:hover {
+            transition: 0.25s ease-in-out;
+            color: var(--color-pry-300);
+        }
+    }
 
     /* h1 {
         font-size: 5rem;
