@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 export const HeaderContainer = styled.header`
   max-width: 100%;
   min-height: 0rem;
-  margin: 1rem 1rem 0rem 1rem ;
+  margin: 1rem 1rem 0rem 1rem;
 `;
 
 export const HeaderWrap = styled.div`
   background-color: var(--color-pry-100);
-  background-color: pink;
   max-width: var(--max-container);
   min-height: 3.125rem;
   margin: var(--center-container);
@@ -18,10 +17,11 @@ export const HeaderWrap = styled.div`
 `;
 
 export const HeaderLogo = styled(Link)`
- 
   img {
     max-width: 9.3125rem;
     height: auto;
+    position: relative;
+    z-index: 1000;
   }
 `;
 
@@ -32,13 +32,18 @@ export const MobileNav = styled.div`
     border: none;
     background-color: transparent;
     cursor: pointer;
+    position: relative;
+    z-index: 1000;
+  }
+  i {
+    font-size: 1.4rem;
+    color: ${({ navToggle }) => (navToggle ? "var(--color-pry-100)" : "black")};
   }
 
   @media screen and (max-width: 786px) {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    background-color: red;
   }
 `;
 
@@ -52,7 +57,14 @@ export const HeaderNav = styled.nav`
   }
 
   @media screen and (max-width: 786px) {
-    display: none;
+    flex-direction: column;
+    background-color: #242a45;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    display: ${({ navToggle }) => (navToggle ? "flex" : "none")};
   }
 `;
 
@@ -60,12 +72,45 @@ export const NavItems = styled.div`
   flex: 10;
   display: flex;
   justify-content: flex-end;
+
+  @media screen and (max-width: 786px) {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5rem;
+  }
 `;
 
 export const NavItem = styled(Link)`
   margin-right: 3rem;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 786px) {
+    margin-right: 0rem;
+    text-align: center;
+    border-top: 0.1rem solid white;
+    border-bottom: 0.1rem solid gray;
+    padding: 1rem 0rem;
+    margin: 0rem 1rem;
+    color: var(--color-pry-100);
+  }
 `;
 
-export const NavCta = styled.div`
+export const NavCtaDesktop = styled.div`
+  @media screen and (max-width: 786px) {
+    display: none;
+  }
+`;
 
+export const NavCtaMobile = styled.div`
+  display: none;
+
+  @media screen and (max-width: 786px) {
+    flex: 10;
+    margin: 1rem;
+    width: 100%;
+    display: block;
+    padding: 0rem 1rem;
+  }
 `;
