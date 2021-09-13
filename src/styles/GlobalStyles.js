@@ -24,6 +24,9 @@ export const GlobalStyles = createGlobalStyle`
 
         //BORDER
         --border-radius: 0.3125rem;
+
+        //ANIMATION 
+        --transition: 0.25s ease-in-out;
     }
 
     ///////////////////////////////////////////////////////

@@ -6,7 +6,8 @@ export const CustomButton = styled.button`
   border-radius: var(--border-radius);
   cursor: pointer;
   font-size: 0.8125rem;
-  font-weight: var(--font-weight-200);
+  font-weight: 500;
+  font-family: var(--font-pry-100);
   line-height: 0rem;
   padding: 1.1rem 2.1rem;
   border: 0.15rem solid var(--color-pry-200);
@@ -41,5 +42,12 @@ export const CustomButton = styled.button`
       background-color: transparent;
       border-color: var(--color-pry-100);
       color: var(--color-pry-100);
+      font-size: 0.9rem;
+
+      &:hover {
+        transition: 0.25s ease-in-out;
+        background-color: var(--color-pry-100);
+        color: hsla(229, 31%, 21%, 0.951);
+      }
     `}
 `;

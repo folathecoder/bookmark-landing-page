@@ -25,6 +25,8 @@ export const HeaderLogo = styled(Link)`
   }
 `;
 
+export const Logo = styled.img``;
+
 export const MobileNav = styled.div`
   display: none;
 
@@ -58,7 +60,7 @@ export const HeaderNav = styled.nav`
 
   @media screen and (max-width: 786px) {
     flex-direction: column;
-    background-color: #242a45;
+    background-color: hsla(229, 31%, 21%, 0.951);
     position: absolute;
     top: 0;
     right: 0;
@@ -78,7 +80,7 @@ export const NavItems = styled.div`
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
 `;
 
@@ -89,8 +91,7 @@ export const NavItem = styled(Link)`
   @media screen and (max-width: 786px) {
     margin-right: 0rem;
     text-align: center;
-    border-top: 0.1rem solid white;
-    border-bottom: 0.1rem solid gray;
+    border-top: 0.1rem solid hsl(0, 0%, 59%);
     padding: 1rem 0rem;
     margin: 0rem 1rem;
     color: var(--color-pry-100);
@@ -98,6 +99,10 @@ export const NavItem = styled(Link)`
 `;
 
 export const NavCtaDesktop = styled.div`
+  text-transform: uppercase;
+  button {
+    text-transform: uppercase;
+  }
   @media screen and (max-width: 786px) {
     display: none;
   }
@@ -105,6 +110,9 @@ export const NavCtaDesktop = styled.div`
 
 export const NavCtaMobile = styled.div`
   display: none;
+  button {
+    text-transform: uppercase;
+  }
 
   @media screen and (max-width: 786px) {
     flex: 10;
@@ -114,3 +122,16 @@ export const NavCtaMobile = styled.div`
     padding: 0rem 1rem;
   }
 `;
+
+export const HeaderSocial = styled.div`
+  display: none;
+  @media screen and (max-width: 786px) {
+    display: flex;
+  }
+`;
+
+export const HeaderSocialItem = styled(Link)`
+  margin: 1rem;
+`;
+
+export const Social = styled.img``;
