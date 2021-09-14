@@ -15,10 +15,8 @@ import {
   Social
 } from "./HeaderStyles";
 import Button from "../Button/Button";
-import { brandData } from "../../data/global/brandData";
-import { menuData, ctaData, socialData } from "../../data/global/menuData";
 
-const Header = () => {
+const Header = ({brandData, menuData, btnData, socialData}) => {
   const [navToggle, setNavToggle] = useState(false);
 
   //TODO: Handle mobile nav toggle
@@ -40,7 +38,10 @@ const Header = () => {
       <HeaderContainer>
         <HeaderWrap>
           <HeaderLogo to="/">
-            <Logo src={navToggle ? brandData.logo2 : brandData.logo1} alt={brandData.name}></Logo>
+            <Logo
+              src={navToggle ? brandData.logo2 : brandData.logo1}
+              alt={brandData.name}
+            ></Logo>
           </HeaderLogo>
           <MobileNav navToggle={navToggle}>
             <button onClick={handleNavToggle}>
@@ -62,20 +63,20 @@ const Header = () => {
               })}
             </NavItems>
             <NavCtaDesktop>
-              <Button primary>{ctaData.title}</Button>
+              <Button primary>{btnData.title}</Button>
             </NavCtaDesktop>
             <NavCtaMobile>
               <Button outline blocked>
-                {ctaData.title}
+                {btnData.title}
               </Button>
             </NavCtaMobile>
             <HeaderSocial>
-              {socialData.map(social => {
+              {socialData.map((social) => {
                 return (
                   <HeaderSocialItem key={social.id} to={social.link}>
                     <Social src={social.image} alt={social.title}></Social>
                   </HeaderSocialItem>
-                )
+                );
               })}
             </HeaderSocial>
           </HeaderNav>

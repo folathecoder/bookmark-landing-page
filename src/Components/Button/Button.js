@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomButton } from "./ButtonStyles";
 
-const Button = ({ primary, blocked, outline, hoverPrimary, event, children }) => {
+const Button = ({ primary, blocked, outline, hoverPrimary, event, link, children }) => {
   
   return (
     <CustomButton
@@ -10,6 +10,7 @@ const Button = ({ primary, blocked, outline, hoverPrimary, event, children }) =>
       outline={outline}
       hoverPrimary={hoverPrimary}
       onClick={event}
+      link={link}
     >
       {children}
     </CustomButton>

@@ -10,10 +10,8 @@ import {
   FooterSocialItem,
   Social,
 } from "./FooterStyles";
-import { brandData } from "../../data/global/brandData";
-import { menuData, socialData } from "../../data/global/menuData";
 
-const Footer = () => {
+const Footer = ({brandData, menuData, socialData}) => {
   return (
     <>
       <FooterContainer>

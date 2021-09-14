@@ -19,7 +19,7 @@ export const menuData = [
   },
 ];
 
-export const ctaData = {
+export const btnData = {
   title: "Login",
   link: "/",
 };

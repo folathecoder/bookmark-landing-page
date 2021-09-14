@@ -13,6 +13,7 @@ export const GlobalStyles = createGlobalStyle`
         --color-pry-300: hsl(0, 94%, 66%);
         --color-sec-100: hsl(229, 31%, 21%);
         --color-sec-200: hsl(229, 8%, 60%);
+        --color-sec-300: hsla(229, 31%, 21%, 0.714);
 
         // FONTS
         --font-pry-100: 'Rubik', sans-serif;
@@ -80,8 +81,14 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.5625rem;
+        color: var(--color-sec-300);
         font-weight: var(--font-weight-100);
+
+        @media ${QUERIES.tabletMini} {
+            font-size: 1rem;
+        }
     }
 
     h2 {
@@ -99,6 +106,12 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 0.8rem;
         line-height: 1rem;
         font-weight: var(--font-weight-100);
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        line-height: 1rem;
+        font-weight: var(--font-weight-200);
     }
 
 `;

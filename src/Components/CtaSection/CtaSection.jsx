@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ctaData, ctaFormData } from "../../data/Home/CtaSectionData";
 import {
   CtaContainer,
   CtaWrap,
@@ -14,7 +13,7 @@ import {
 
 import Button from "../Button/Button";
 
-const CtaSection = () => {
+const CtaSection = ({ ctaData, ctaFormData }) => {
   const [input, setInput] = useState({});
   const [email, setEmail] = useState("");
 
@@ -30,8 +29,6 @@ const CtaSection = () => {
       setEmail(input);
     }
   };
-
-  console.log(email);
 
   return (
     <>

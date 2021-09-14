@@ -1,8 +1,5 @@
 import React from "react";
 import Button from "../Button/Button";
-
-
-
 import {
   DownloadContainer,
   DownloadWrap,
@@ -13,13 +10,11 @@ import {
   ExtensionImage,
   ExtensionTitle,
   ExtensionDescription,
+  ExtensionButton,
+  DottedLines,
 } from "./DownloadSectionStyles";
-import {
-  downloadData,
-  extensionData,
-} from "../../data/Home/DownloadSectionData";
 
-const DownloadSection = () => {
+const DownloadSection = ({ downloadData, extensionData }) => {
   return (
     <>
       <DownloadContainer>
@@ -27,18 +22,23 @@ const DownloadSection = () => {
           <DownloadHeader>{downloadData.header}</DownloadHeader>
           <DownloadSubHeader>{downloadData.subheader}</DownloadSubHeader>
           <ExtensionCards>
-              {extensionData.map(extension => {
-                  return (
-                    <ExtensionCard>
-                      <ExtensionImage src={extension.image} />
-                      <ExtensionTitle>{extension.title}</ExtensionTitle>
-                      <ExtensionDescription>
-                        {extension.description}
-                      </ExtensionDescription>
-                      <Button blocked>{extension.buttonText}</Button>
-                    </ExtensionCard>
-                  );
-              })}
+            {extensionData.map((extension, index) => {
+              return (
+                <ExtensionCard key={extension.id} index={index}>
+                  <ExtensionImage src={extension.image} />
+                  <ExtensionTitle>{extension.title}</ExtensionTitle>
+                  <ExtensionDescription>
+                    {extension.description}
+                  </ExtensionDescription>
+                  <DottedLines />
+                  <ExtensionButton>
+                    <Button blocked link={extension.link}>
+                      {extension.buttonText}
+                    </Button>
+                  </ExtensionButton>
+                </ExtensionCard>
+              );
+            })}
           </ExtensionCards>
         </DownloadWrap>
       </DownloadContainer>
