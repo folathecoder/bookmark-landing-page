@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { QUERIES } from "../helpers/MediaQueries";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -73,13 +74,31 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 0.9rem;
 
         &:hover {
-            transition: 0.25s ease-in-out;
+            transition: var(--transition);
             color: var(--color-pry-300);
         }
     }
+    
+    p {
+        font-size: 1rem;
+        font-weight: var(--font-weight-100);
+    }
 
-    /* h1 {
-        font-size: 5rem;
-    } */
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        font-weight: var(--font-weight-200);
+
+        @media ${QUERIES.tabletMini} {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    h3 {
+        font-size: 0.8rem;
+        line-height: 1rem;
+        font-weight: var(--font-weight-100);
+    }
 
 `;

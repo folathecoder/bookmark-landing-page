@@ -50,4 +50,14 @@ export const CustomButton = styled.button`
         color: hsla(229, 31%, 21%, 0.951);
       }
     `}
+
+    ${({ hoverPrimary }) =>
+    hoverPrimary &&
+    css`
+      &:hover {
+        background-color: var(--color-pry-100);
+        border-color: var(--color-pry-300);
+        color: var(--color-pry-300);
+      }
+    `}
 `;

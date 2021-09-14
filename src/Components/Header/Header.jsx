@@ -15,7 +15,8 @@ import {
   Social
 } from "./HeaderStyles";
 import Button from "../Button/Button";
-import { brandData, menuData, ctaData, socialData } from "./HeaderData";
+import { brandData } from "../../data/global/brandData";
+import { menuData, ctaData, socialData } from "../../data/global/menuData";
 
 const Header = () => {
   const [navToggle, setNavToggle] = useState(false);
