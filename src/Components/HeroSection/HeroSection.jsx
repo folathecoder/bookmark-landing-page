@@ -13,7 +13,7 @@ import {
 
 const HeroSection = ({ heroData }) => {
   return (
-    <div>
+    <>
       <HeroContainer>
         <HeroWrap>
           <HeroContent>
@@ -29,7 +29,7 @@ const HeroSection = ({ heroData }) => {
           </HeroImageWrap>
         </HeroWrap>
       </HeroContainer>
-    </div>
+    </>
   );
 };
 
