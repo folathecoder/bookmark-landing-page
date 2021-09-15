@@ -11,6 +11,7 @@ export const CustomButton = styled.button`
   line-height: 0rem;
   padding: 1.1rem 2.1rem;
   border: 0.15rem solid var(--color-pry-200);
+  box-shadow: 0rem 0rem 0.5rem hsla(0, 0%, 0%, 0.247);
 
   &:hover {
     transition: 0.25s ease-in-out;
@@ -58,6 +59,26 @@ export const CustomButton = styled.button`
         background-color: var(--color-pry-100);
         border-color: var(--color-pry-300);
         color: var(--color-pry-300);
+      }
+    `}
+
+    ${({ spaced }) =>
+    spaced &&
+    css`
+      padding: 1.1rem 0rem;
+    `}
+
+    ${({ secondary }) =>
+    secondary &&
+    css`
+      background-color: var(--color-pry-100);
+      color: var(--color-sec-100);
+      border-color: var(--color-pry-100);
+
+      &:hover {
+        background-color: var(--color-pry-100);
+        border-color: var(--color-pry-200);
+        color: var(--color-pry-200);
       }
     `}
 `;

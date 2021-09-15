@@ -86,8 +86,20 @@ export const GlobalStyles = createGlobalStyle`
         color: var(--color-sec-300);
         font-weight: var(--font-weight-100);
 
+
         @media ${QUERIES.tabletMini} {
-            font-size: 1rem;
+            font-size: 1 rem;
+        }
+    }
+
+    h1 {
+        font-size: 1.87rem;
+        line-height: 2.5rem;
+        font-weight: var(--font-weight-200);
+
+        @media ${QUERIES.tabletMini} {
+            font-size: 3rem;
+            line-height: 3.25rem;
         }
     }
 
