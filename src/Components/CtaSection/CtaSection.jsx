@@ -30,6 +30,8 @@ const CtaSection = ({ ctaData, ctaFormData }) => {
     }
   };
 
+  console.log(email)
+
   return (
     <>
       <CtaContainer>
