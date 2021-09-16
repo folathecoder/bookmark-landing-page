@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../../components/Header/Header.jsx";
-import HeroSection from "../../components/HeroSection/HeroSection.jsx";
-import CtaSection from "../../components/CtaSection/CtaSection.jsx";
-import Footer from "../../components/Footer/Footer.jsx";
-import DownloadSection from "../../components/DownloadSection/DownloadSection.jsx";
+import HeroSection from "../../components/HeroSection/HeroSection";
+import CtaSection from "../../components/CtaSection/CtaSection";
+import Footer from "../../components/Footer/Footer";
+import DownloadSection from "../../components/DownloadSection/DownloadSection";
+import Header from "../../components/Header/Header";
 
 import { brandData } from "../../data/global/brandData";
 import { menuData, btnData, socialData } from "../../data/global/menuData";
