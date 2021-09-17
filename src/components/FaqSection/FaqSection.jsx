@@ -53,7 +53,7 @@ const FaqSection = ({ faqData }) => {
                     }}
                   >
                     <FaqQuestion>{faq.question}</FaqQuestion>
-                    <FaqIcon>
+                    <FaqIcon index={index} clicked={clicked}>
                       {clicked === index ? (
                         <i className="fas fa-chevron-up"></i>
                       ) : (

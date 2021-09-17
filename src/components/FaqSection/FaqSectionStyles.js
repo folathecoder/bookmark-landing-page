@@ -69,7 +69,8 @@ export const FaqIcon = styled.div`
   align-items: center;
 
   i {
-    color: var(--color-pry-200);
+    color: ${({ clicked, index }) =>
+      clicked === index ? "var(--color-pry-300)" : "var(--color-pry-200)"};
   }
 `;
 
