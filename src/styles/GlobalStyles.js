@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
         --color-sec-100: hsl(229, 31%, 21%);
         --color-sec-200: hsl(229, 8%, 60%);
         --color-sec-300: hsla(229, 31%, 21%, 0.714);
+        --color-sec-400: hsla(229, 31%, 21%, 0.234);
 
         // FONTS
         --font-pry-100: 'Rubik', sans-serif;
@@ -126,4 +127,14 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: var(--font-weight-200);
     }
 
+    h5 {
+        font-size: 0.93rem;
+        line-height: 1rem;
+        font-weight: var(--font-weight-100);
+
+        @media ${QUERIES.tabletMini} {
+            font-size: 1.125rem;
+            line-height: 2rem;
+        }
+    }
 `;
