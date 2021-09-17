@@ -4,7 +4,7 @@ const BREAKPOINTS = {
     md: 786,
     l: 992,
     xl: 1200,
-    xxl: 1400,
+    xxl: 1500,
 };
 
 export const QUERIES = {

@@ -33,6 +33,9 @@ export const HeroContainer = styled.section`
   @media ${QUERIES.desktop} {
     background-position: 50rem 12.5rem;
   }
+  @media ${QUERIES.megaDesktop} {
+    background-image: none;
+  }
 `;
 
 export const HeroWrap = styled.div`
