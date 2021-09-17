@@ -18,10 +18,12 @@ export const FaqWrap = styled.div`
 export const FaqHeader = styled.h2`
   margin: 1rem;
 `;
+
 export const FaqSubHeader = styled.p`
   max-width: 33.8125rem;
   margin: var(--center-container);
 `;
+
 export const Faq = styled.div`
   max-width: 33.8125rem;
   margin: var(--center-container);
