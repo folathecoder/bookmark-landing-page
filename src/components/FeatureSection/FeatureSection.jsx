@@ -18,7 +18,6 @@ import Button from "../Button/Button";
 const FeatureSection = ({ featureData }) => {
   const [clicked, setClicked] = useState(0);
 
-
   //TODO: Handle tab click event to extract index and update state
   const handleClick = (index) => {
     setClicked(index);

@@ -6,6 +6,7 @@ import DownloadSection from "../../components/DownloadSection/DownloadSection";
 import CtaSection from "../../components/CtaSection/CtaSection";
 import FaqSection from "../../components/FaqSection/FaqSection";
 import Footer from "../../components/Footer/Footer";
+import { Main } from "../../styles/GlobalStyles";
 import { heroData } from "../../data/Home/HeroSectionData";
 import { brandData } from "../../data/global/brandData";
 import { menuData, btnData, socialData } from "../../data/global/menuData";
@@ -26,20 +27,16 @@ const Home = () => {
         btnData={btnData}
         socialData={socialData}
       />
-
-      <HeroSection heroData={heroData} />
-
-      <FeatureSection featureData={featureData}/>
-
-      <DownloadSection
-        downloadData={downloadData}
-        extensionData={extensionData}
-      />
-
-      <FaqSection faqData={faqData} />
-
-      <CtaSection ctaData={ctaData} ctaFormData={ctaFormData} />
-
+      <Main>
+        <HeroSection heroData={heroData} />
+        <FeatureSection featureData={featureData} />
+        <DownloadSection
+          downloadData={downloadData}
+          extensionData={extensionData}
+        />
+        <FaqSection faqData={faqData} />
+        <CtaSection ctaData={ctaData} ctaFormData={ctaFormData} />
+      </Main>
       <Footer
         brandData={brandData}
         menuData={menuData}

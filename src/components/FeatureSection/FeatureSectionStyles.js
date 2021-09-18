@@ -23,7 +23,7 @@ export const FeatureContainer = styled.section`
 
   @media ${QUERIES.tablet} {
     background-size: 62.5rem 22rem;
-    background-position: -30rem 32rem;
+    background-position: -30rem 26rem;
   }
 
   @media ${QUERIES.megaDesktop} {
@@ -90,7 +90,6 @@ export const FeatureContentWrap = styled.div`
   max-width: 100%;
   min-height: 7rem;
   margin: 2rem 0rem;
-  /* background-color: pink; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -119,7 +118,6 @@ export const FeatureContent = styled.div`
 export const FeatureContentInner = styled.div`
   max-width: 27.8125rem;
   margin-top: 2rem;
-  /* background-color: red; */
 
   @media ${QUERIES.tablet} {
     margin-top: 0rem;

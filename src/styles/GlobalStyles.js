@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { QUERIES } from "../helpers/MediaQueries";
 
 export const GlobalStyles = createGlobalStyle`
@@ -139,3 +139,5 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 `;
+
+export const Main = styled.main``;
