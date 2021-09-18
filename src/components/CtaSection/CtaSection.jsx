@@ -27,7 +27,7 @@ const CtaSection = ({ ctaData, ctaFormData }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const emailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+    const emailValid = !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
       input.email
     );
 
@@ -39,6 +39,7 @@ const CtaSection = ({ ctaData, ctaFormData }) => {
       document.getElementById("email").value = " ";
     }
   };
+  console.log(error)
 
   return (
     <>
