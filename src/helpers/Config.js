@@ -1,6 +1,4 @@
-//TODO: Function that converts pixel values to rem
-const rem = (pixel) => {
-  const remSize = pixel / 16;
-  return `${remSize}rem`;
-};
-
+//TODO: Regular expression to validate email
+export const validEmail = new RegExp(
+  "^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$"
+);

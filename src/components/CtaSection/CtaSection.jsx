@@ -10,7 +10,7 @@ import {
   EmailError,
   FormButtonWrap,
 } from "./CtaSectionStyles";
-
+import { validEmail } from "../../helpers/Config";
 import Button from "../Button/Button";
 
 const CtaSection = ({ ctaData, ctaFormData }) => {
@@ -27,10 +27,10 @@ const CtaSection = ({ ctaData, ctaFormData }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const emailValid = !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
-      input.email
+    const emailValid = validEmail.test(
+        input.email
     );
-
+    
     if (!emailValid) {
       setError(false);
     } else {
@@ -39,7 +39,6 @@ const CtaSection = ({ ctaData, ctaFormData }) => {
       document.getElementById("email").value = " ";
     }
   };
-  console.log(error)
 
   return (
     <>
@@ -56,6 +55,7 @@ const CtaSection = ({ ctaData, ctaFormData }) => {
                 placeholder={ctaFormData.placeholder}
                 onChange={handleInputChange}
                 error={error}
+                email={email}
               />
               <EmailError error={error}>{ctaFormData.errorMessage}</EmailError>
             </FormInputWrap>
