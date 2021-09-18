@@ -30,7 +30,7 @@ const CtaSection = ({ ctaData, ctaFormData }) => {
     const emailValid = validEmail.test(
         input.email
     );
-    
+
     if (!emailValid) {
       setError(false);
     } else {

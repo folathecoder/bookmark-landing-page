@@ -12,6 +12,7 @@ export const extensionData = [
   {
     id: 1,
     image: chrome,
+    imageAlt: "chrome logo",
     title: "Add to Chrome",
     description: "Minimum version 62",
     link: "/",
@@ -20,6 +21,7 @@ export const extensionData = [
   {
     id: 2,
     image: firefox,
+    imageAlt: "firefox logo",
     title: "Add to Firefox",
     description: "Minimum version 55",
     link: "/",
@@ -28,6 +30,7 @@ export const extensionData = [
   {
     id: 3,
     image: opera,
+    imageAlt: "opera logo",
     title: "Add to Opera",
     description: "Minimum version 646",
     link: "/",

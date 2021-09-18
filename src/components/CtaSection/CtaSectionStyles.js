@@ -63,7 +63,9 @@ export const EmailInput = styled.input`
     error ? "0.3125rem" : "0.3125rem 0.3125rem 0rem 0rem"};
   padding-left: 1rem;
   color: #242a45;
+  position: relative;
 `;
+
 export const EmailError = styled.p`
   background-color: var(--color-pry-300);
   border-radius: 0rem 0rem 0.3125rem 0.3125rem;
@@ -71,6 +73,6 @@ export const EmailError = styled.p`
   padding: 0.5rem 1rem;
   text-align: left;
   color: var(--color-pry-100);
-  display: ${({error}) => error ? "none" : "block"};
+  display: ${({ error }) => (error ? "none" : "block")};
 `;
 export const FormButtonWrap = styled.div``;

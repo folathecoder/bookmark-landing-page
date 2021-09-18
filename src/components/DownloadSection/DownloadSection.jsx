@@ -25,7 +25,7 @@ const DownloadSection = ({ downloadData, extensionData }) => {
             {extensionData.map((extension, index) => {
               return (
                 <ExtensionCard key={extension.id} index={index}>
-                  <ExtensionImage src={extension.image} />
+                  <ExtensionImage src={extension.image} alt={extension.imageAlt} />
                   <ExtensionTitle>{extension.title}</ExtensionTitle>
                   <ExtensionDescription>
                     {extension.description}

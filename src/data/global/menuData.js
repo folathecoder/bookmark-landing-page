@@ -5,23 +5,23 @@ export const menuData = [
   {
     id: 1,
     title: "Features",
-    link: "/", 
+    link: "/features", 
   },
   {
     id: 2,
     title: "Pricing",
-    link: "/",
+    link: "/pricing",
   },
   {
     id: 3,
     title: "Contact",
-    link: "/",
+    link: "/contact",
   },
 ];
 
 export const btnData = {
   title: "Login",
-  link: "/",
+  link: "/login",
 };
 
 export const socialData = [
@@ -29,12 +29,12 @@ export const socialData = [
     id: 1,
     title: "facebook",
     image: facebook,
-    link: "/",
+    link: "/facebook",
   },
   {
     id: 2,
     title: "twitter",
     image: twitter,
-    link: "/",
+    link: "/facebook",
   },
 ];
