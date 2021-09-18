@@ -107,7 +107,11 @@ export const FeatureContentWrap = styled.div`
     margin: 4rem 0rem;
   }
 `;
-export const FeatureImage = styled.img``;
+export const FeatureImage = styled.img`
+  display: block;
+  max-width: 100%;
+  height: auto;
+`;
 export const FeatureContent = styled.div`
   @media ${QUERIES.tablet} {
     display: flex;
