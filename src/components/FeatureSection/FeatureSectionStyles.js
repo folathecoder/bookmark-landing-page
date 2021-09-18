@@ -9,7 +9,7 @@ export const FeatureContainer = styled.section`
   background-image: url(${featureBackground});
   background-repeat: no-repeat;
   background-size: 36.0625rem 12.6875rem;
-  background-position: -20rem 36rem;
+  background-position: -20rem 32rem;
 
   @media ${QUERIES.mobile} {
     background-size: 36.0625rem 12.6875rem;
