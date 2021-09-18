@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import HeroSection from "../../components/HeroSection/HeroSection";
+import FeatureSection from "../../components/FeatureSection/FeatureSection";
 import DownloadSection from "../../components/DownloadSection/DownloadSection";
 import CtaSection from "../../components/CtaSection/CtaSection";
 import FaqSection from "../../components/FaqSection/FaqSection";
@@ -14,6 +15,7 @@ import {
 } from "../../data/Home/DownloadSectionData";
 import { ctaData, ctaFormData } from "../../data/Home/CtaSectionData";
 import { faqData } from "../../data/Home/FaqSectionData";
+import { featureData } from "../../data/Home/FeatureSectionData";
 
 const Home = () => {
   return (
@@ -26,6 +28,8 @@ const Home = () => {
       />
 
       <HeroSection heroData={heroData} />
+
+      <FeatureSection featureData={featureData}/>
 
       <DownloadSection
         downloadData={downloadData}

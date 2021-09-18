@@ -64,6 +64,7 @@ export const GlobalStyles = createGlobalStyle`
         font-family: var(--font-pry-100);
         font-weight: var(--font-weight-100);
         background-color: var(--color-pry-100);
+        color: var(--color-sec-100);
     }
 
     ///////////////////////////////////////////////////////
