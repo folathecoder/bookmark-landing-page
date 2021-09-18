@@ -7,6 +7,7 @@ import {
   FeatureTabs,
   FeatureTab,
   FeatureContentWrap,
+  FeatureImageWrap,
   FeatureImage,
   FeatureContent,
   FeatureContentInner,
@@ -49,10 +50,12 @@ const FeatureSection = ({ featureData }) => {
           {featureData.featureContent.map((feature, index) => {
             return (
               <FeatureContentWrap key={index} index={index} clicked={clicked}>
-                <FeatureImage
-                  src={feature.image}
-                  alt={feature.imageAlt}
-                ></FeatureImage>
+                <FeatureImageWrap>
+                  <FeatureImage
+                    src={feature.image}
+                    alt={feature.imageAlt}
+                  ></FeatureImage>
+                </FeatureImageWrap>
                 <FeatureContent>
                   <FeatureContentInner>
                     <FeatureContentHeader>{feature.title}</FeatureContentHeader>

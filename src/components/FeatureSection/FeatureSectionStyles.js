@@ -107,6 +107,10 @@ export const FeatureContentWrap = styled.div`
     margin: 4rem 0rem;
   }
 `;
+
+export const FeatureImageWrap = styled.div`
+  
+`
 export const FeatureImage = styled.img`
   display: block;
   max-width: 100%;
