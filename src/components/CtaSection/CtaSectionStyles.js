@@ -57,9 +57,10 @@ export const FormInputWrap = styled.div`
 export const EmailInput = styled.input`
   width: 100%;
   height: 2.3rem;
-  border: 0.15rem solid var(--color-pry-300);
-  /* border-radius: var(--border-radius); */
-  border-radius: 0.3125rem 0.3125rem 0rem 0rem;
+  border: 0.15rem solid
+    ${({ error }) => (error ? "var(--color-pry-100)" : "var(--color-pry-300)")};
+  border-radius: ${({ error }) =>
+    error ? "0.3125rem" : "0.3125rem 0.3125rem 0rem 0rem"};
   padding-left: 1rem;
   color: #242a45;
 `;
@@ -70,5 +71,6 @@ export const EmailError = styled.p`
   padding: 0.5rem 1rem;
   text-align: left;
   color: var(--color-pry-100);
+  display: ${({error}) => error ? "none" : "block"};
 `;
 export const FormButtonWrap = styled.div``;

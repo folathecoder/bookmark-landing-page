@@ -15,6 +15,7 @@ import Button from "../Button/Button";
 
 const CtaSection = ({ ctaData, ctaFormData }) => {
   const [input, setInput] = useState({});
+  const [error, setError] = useState(true);
   const [email, setEmail] = useState("");
 
   const handleInputChange = (e) => {
@@ -25,12 +26,19 @@ const CtaSection = ({ ctaData, ctaFormData }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (input.email) {
+
+    const emailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+      input.email
+    );
+
+    if (!emailValid) {
+      setError(false);
+    } else {
+      setError(true);
       setEmail(input);
+      document.getElementById("email").value = " ";
     }
   };
-
-  console.log(email)
 
   return (
     <>
@@ -46,8 +54,9 @@ const CtaSection = ({ ctaData, ctaFormData }) => {
                 id="email"
                 placeholder={ctaFormData.placeholder}
                 onChange={handleInputChange}
+                error={error}
               />
-              <EmailError>{ctaFormData.errorMessage}</EmailError>
+              <EmailError error={error}>{ctaFormData.errorMessage}</EmailError>
             </FormInputWrap>
             <FormButtonWrap>
               <Button
